@@ -11,7 +11,7 @@ const routes: Routes = [
         component: LayoutAuthComponent,
         children: [
             {
-                path: '',
+                path: 'login',
                 component: LoginComponent,
             },
             // {
@@ -70,7 +70,7 @@ const routes: Routes = [
             // },
             {
                 path: '',
-                redirectTo: 'dashboard',
+                redirectTo: 'login',
                 pathMatch: 'full',
             },
             {
