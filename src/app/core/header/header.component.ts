@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {Subject} from 'rxjs'
 import {NbSidebarService, NbThemeService} from '@nebular/theme'
+import {NbMenuItem} from '@nebular/theme/components/menu/menu.service'
 
 @Component({
     selector: 'app-header',
@@ -10,12 +11,18 @@ import {NbSidebarService, NbThemeService} from '@nebular/theme'
 export class HeaderComponent implements OnInit {
 
     private destroy$: Subject<void> = new Subject<void>()
-    userPictureOnly: boolean = false
-    user: any
+    userPictureOnly: boolean = true
+    user: any = {name: 'Nick Jones', picture: 'assets/images/nick.png'}
 
-    userMenu = [
-        {title: 'Profile'},
-        {title: 'Log out'}
+    userMenu: NbMenuItem[] = [
+        {
+            title: 'Mi cuenta',
+            icon: 'person-outline'
+        },
+        {
+            title: 'Salir',
+            icon: 'log-in-outline'
+        }
     ]
 
     constructor(
