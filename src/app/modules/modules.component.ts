@@ -1,15 +1,32 @@
-import {Component, OnInit} from '@angular/core'
+import {Component} from '@angular/core'
 import {NbMenuItem} from '@nebular/theme'
 
-
 @Component({
-    selector: 'app-layout',
-    templateUrl: './layout.component.html',
-    styleUrls: ['./layout.component.scss'],
-    providers: []
-})
-export class LayoutComponent implements OnInit {
+    selector: 'app-modules',
+    template: `
+        <nb-layout windowMode>
+            <nb-layout-header fixed>
+                <!-- Insert header here -->
+                <app-header></app-header>
+            </nb-layout-header>
 
+            <!-- sidebar -->
+            <!--                        <app-sidebar></app-sidebar>-->
+            <nb-sidebar class="menu-sidebar"
+                        tag="menu-sidebar" responsive>
+                <ng-content select="nb-menu"></ng-content>
+                <nb-menu [items]="menu" [autoCollapse]="true"></nb-menu>
+            </nb-sidebar>
+            <!-- end sidebar -->
+
+            <nb-layout-column>
+                <router-outlet></router-outlet>
+            </nb-layout-column>
+        </nb-layout>
+    `,
+    styleUrls: ['./modules.component.scss']
+})
+export class ModulesComponent {
     menu: NbMenuItem[] = [
         {
             title: 'DASHBOARD',
@@ -97,6 +114,7 @@ export class LayoutComponent implements OnInit {
             ]
         }
     ]
+
 
     constructor() {
     }

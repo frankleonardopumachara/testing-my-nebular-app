@@ -5,7 +5,7 @@ import {HeaderComponent} from './header/header.component'
 import {
     NbActionsModule,
     NbContextMenuModule,
-    NbIconModule,
+    NbIconModule, NbMenuModule,
     NbSearchModule,
     NbSelectModule, NbSidebarModule,
     NbUserModule
@@ -28,7 +28,8 @@ import {
         NbSearchModule,
         NbUserModule,
         NbContextMenuModule,
-        NbSidebarModule
+        NbSidebarModule,
+        NbMenuModule
     ], providers: []
 })
 export class CoreModule {
