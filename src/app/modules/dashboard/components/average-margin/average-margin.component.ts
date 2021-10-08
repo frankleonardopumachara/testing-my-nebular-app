@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core'
 
 @Component({
-  selector: 'app-average-margin',
-  templateUrl: './average-margin.component.html',
-  styleUrls: ['./average-margin.component.scss']
+    selector: 'app-average-margin',
+    templateUrl: './average-margin.component.html',
+    styleUrls: ['./average-margin.component.scss']
 })
 export class AverageMarginComponent implements OnInit {
 
-  constructor() { }
+    @Input() title: string = ''
+    @Input() type: string = ''
+    @Input() on = true
 
-  ngOnInit(): void {
-  }
+    constructor() {
+    }
+
+    ngOnInit(): void {
+    }
 
 }

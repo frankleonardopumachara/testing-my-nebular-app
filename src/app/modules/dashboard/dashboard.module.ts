@@ -7,6 +7,9 @@ import { TotalMarginComponent } from './components/total-margin/total-margin.com
 import { PaymentsCashComponent } from './components/payments-cash/payments-cash.component';
 import { CardPaymentsComponent } from './components/card-payments/card-payments.component';
 import { CreditPaymentsComponent } from './components/credit-payments/credit-payments.component';
+import { DashboardComponent } from './dashboard.component';
+import { DashboardPage1Component } from './pages/dashboard-page1/dashboard-page1.component';
+import {RouterModule} from '@angular/router'
 
 
 
@@ -18,10 +21,13 @@ import { CreditPaymentsComponent } from './components/credit-payments/credit-pay
     TotalMarginComponent,
     PaymentsCashComponent,
     CardPaymentsComponent,
-    CreditPaymentsComponent
+    CreditPaymentsComponent,
+    DashboardComponent,
+    DashboardPage1Component
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule
+    ]
 })
 export class DashboardModule { }
