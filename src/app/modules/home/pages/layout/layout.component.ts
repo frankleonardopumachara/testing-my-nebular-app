@@ -12,8 +12,12 @@ export class LayoutComponent implements OnInit {
 
     menu: NbMenuItem[] = [
         {
+            title: 'DASHBOARD',
+            icon: 'pie-chart-outline'
+        },
+        {
             title: 'CONFIGURACIÓN',
-            icon: '',
+            icon: 'settings-2-outline',
             children: [
                 {
                     title: 'MAESTROS',
@@ -25,7 +29,7 @@ export class LayoutComponent implements OnInit {
         },
         {
             title: 'ALMACEN',
-            icon: '',
+            icon: 'shopping-bag-outline',
             children: [
                 {
                     title: 'ALMACENES'
@@ -48,7 +52,47 @@ export class LayoutComponent implements OnInit {
                     ]
                 },
                 {
-                    title: 'Administración'
+                    title: 'Administración',
+                    children: [
+                        {
+                            title: 'Ajuste de inventario'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: 'INGRESOS',
+            icon: 'activity-outline',
+            children: [
+                {
+                    title: 'CLIENTES'
+                },
+                {
+                    title: 'COTIZACIONES'
+                },
+                {
+                    title: 'PRODUCTOS'
+                },
+                {
+                    title: 'FACTURACIÓN',
+                    children: [
+                        {
+                            title: 'Registro ventas'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: 'USUARIOS',
+            icon: 'people-outline',
+            children: [
+                {
+                    title: 'REGISTRO DE USUARIOS',
+                },
+                {
+                    title: 'NIVELES DE ACCESO'
                 }
             ]
         }
