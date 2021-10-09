@@ -30,7 +30,8 @@ export class ModulesComponent {
     menu: NbMenuItem[] = [
         {
             title: 'DASHBOARD',
-            icon: 'pie-chart-outline'
+            icon: 'pie-chart-outline',
+            link: '/pages/dashboard'
         },
         {
             title: 'CONFIGURACIÓN',
