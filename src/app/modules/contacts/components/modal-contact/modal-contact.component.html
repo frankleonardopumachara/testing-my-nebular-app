@@ -1,0 +1,113 @@
+<nb-card>
+    <nb-card-header>
+        {{ title }}
+    </nb-card-header>
+    <nb-card-body>
+        <nb-tabset>
+            <nb-tab tabTitle="Datos Generales"
+                    tabIcon="person-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Documento
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">DNI</nb-option>
+                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
+                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
+                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
+                        </nb-select>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="docNumber"
+                                   class="label">
+                                Número de documento
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="docNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputFirstName" class="label">Nombres</label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputFirstName"
+                                   placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputFirstName"
+                               class="label">Fecha Nacimiento</label> <br>
+                        <input nbInput
+                               fieldSize="small"
+                               placeholder="DÍA/MES/AÑO" fullWidth
+                               [nbDatepicker]="formpicker">
+                        <nb-datepicker #formpicker
+                                       format="dd/MM/yyyy"></nb-datepicker>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputLastName"
+                                   class="label">
+                                Apellido paterno
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputLastName"
+                                   placeholder="Apellido paterno">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputLastName2"
+                                   class="label">
+                                Apellido materno
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputLastName2"
+                                   placeholder="Apellido materno">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="correo"
+                                   class="label">
+                                Correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="correo"
+                                   placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="secondCorreo"
+                                   class="label">
+                                Segundo correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="secondCorreo"
+                                   placeholder="Segundo correo electrónico">
+                        </div>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Datos de empresa"
+                    tabIcon="bell-outline"
+                    responsive>
+                <h1> hola mundo</h1>
+            </nb-tab>
+        </nb-tabset>
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero status="primary" (click)="dismiss()">Dismiss Dialog</button>
+    </nb-card-footer>
+</nb-card>

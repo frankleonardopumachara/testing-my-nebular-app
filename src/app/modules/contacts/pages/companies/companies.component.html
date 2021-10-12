@@ -1,50 +1,93 @@
 <div class="row mt-3">
-    <div class="col-12">
+    <div class="col-md-6">
         <h5 class="d-inline mr-auto">Lista de empresas</h5>
-        <button nbButton
-                ghost
-                [status]="'primary'"
-                nbTooltipIcon="sync"
-                nbTooltipStatus="primary"
-                nbTooltip="Actualizar tabla"
-                nbTooltipPlacement="bottom"
-                class="mr-2">
-            <nb-icon icon="sync"></nb-icon>
-        </button>
-        <nb-select selected="1" class="mr-2">
-            <nb-option value="1">Option 1</nb-option>
-            <nb-option value="2">Option 2</nb-option>
-        </nb-select>
-        <button nbButton
-                [status]="'primary'"
-                nbTooltipIcon="plus"
-                nbTooltipStatus="primary"
-                nbTooltip="Agregar empresa"
-                nbTooltipPlacement="bottom">
-            Agregar Empresa
-        </button>
+        <!--        <button nbButton-->
+        <!--                ghost-->
+        <!--                [status]="'primary'"-->
+        <!--                nbTooltipIcon="sync"-->
+        <!--                nbTooltipStatus="primary"-->
+        <!--                nbTooltip="Actualizar tabla"-->
+        <!--                nbTooltipPlacement="bottom"-->
+        <!--                class="mr-2">-->
+        <!--            <nb-icon icon="sync"></nb-icon>-->
+        <!--        </button>-->
+        <!--        <nb-select selected="1" class="mr-2">-->
+        <!--            <nb-option value="1">Option 1</nb-option>-->
+        <!--            <nb-option value="2">Option 2</nb-option>-->
+        <!--        </nb-select>-->
+        <!--        <button nbButton-->
+        <!--                [status]="'primary'"-->
+        <!--                nbTooltipIcon="plus"-->
+        <!--                nbTooltipStatus="primary"-->
+        <!--                nbTooltip="Agregar empresa"-->
+        <!--                nbTooltipPlacement="bottom">-->
+        <!--            Agregar Empresa-->
+        <!--        </button>-->
+    </div>
+    <div class="col-md-6">
+        <div class="input-group d-flex justify-content-end">
+            <button nbButton
+                    class="ml-2"
+                    [status]="'primary'"
+                    nbTooltipIcon="sync"
+                    nbTooltipStatus="primary"
+                    nbTooltip="Actualizar tabla"
+                    nbTooltipPlacement="bottom"
+                    ghost>
+                <nb-icon icon="sync"></nb-icon>
+            </button>
+            <nb-form-field class="ml-2 mt-1">
+                <input type="search" nbInput
+                       fullWidth
+                       status="primary"
+                       placeholder="Buscar">
+                <button nbSuffix nbButton outline
+                        nbTooltipIcon="search"
+                        nbTooltipStatus="primary"
+                        nbTooltip="Buscar"
+                        nbTooltipPlacement="bottom"
+                        (click)="search()">
+                    <nb-icon [icon]="'search-outline'"
+                             pack="eva">
+                    </nb-icon>
+                </button>
+            </nb-form-field>
+
+            <button nbButton
+                    class="ml-2 mt-1"
+                    [status]="'primary'"
+                    (click)="openModal()"
+                    nbTooltipIcon="plus"
+                    nbTooltipStatus="primary"
+                    nbTooltip="Agregar contacto"
+                    nbTooltipPlacement="bottom">
+                <nb-icon icon="plus"></nb-icon>
+                Agregar
+            </button>
+        </div>
     </div>
 </div>
 
-<div class="row mt-4">
-    <div class="col-md-4">
-        <nb-form-field>
-            <input type="text" nbInput
-                   fullWidth
-                   status="primary"
-                   placeholder="Buscar">
-            <button nbSuffix nbButton outline
-                    nbTooltipIcon="search"
-                    nbTooltipStatus="primary"
-                    nbTooltip="Buscar"
-                    (click)="search()">
-                <nb-icon [icon]="'search-outline'"
-                         pack="eva">
-                </nb-icon>
-            </button>
-        </nb-form-field>
-    </div>
-</div>
+
+<!--<div class="row mt-4">-->
+<!--    <div class="col-md-4">-->
+<!--        <nb-form-field>-->
+<!--            <input type="text" nbInput-->
+<!--                   fullWidth-->
+<!--                   status="primary"-->
+<!--                   placeholder="Buscar">-->
+<!--            <button nbSuffix nbButton outline-->
+<!--                    nbTooltipIcon="search"-->
+<!--                    nbTooltipStatus="primary"-->
+<!--                    nbTooltip="Buscar"-->
+<!--                    (click)="search()">-->
+<!--                <nb-icon [icon]="'search-outline'"-->
+<!--                         pack="eva">-->
+<!--                </nb-icon>-->
+<!--            </button>-->
+<!--        </nb-form-field>-->
+<!--    </div>-->
+<!--</div>-->
 
 <app-table [headerTable]="headerTableCompany">
 </app-table>

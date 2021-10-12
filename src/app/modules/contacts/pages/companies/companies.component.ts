@@ -18,4 +18,8 @@ export class CompaniesComponent implements OnInit {
     search() {
 
     }
+
+    openModal(){
+        console.log('openModal')
+    }
 }

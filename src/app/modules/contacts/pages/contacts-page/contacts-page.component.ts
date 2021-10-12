@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NbDialogService} from '@nebular/theme'
 
 @Component({
   selector: 'app-contacts-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogService: NbDialogService) { }
 
   ngOnInit(): void {
   }

@@ -1,33 +1,37 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core'
+import {CommonModule} from '@angular/common'
 
-import { ContactsRoutingModule } from './contacts-routing.module';
-import { CompaniesComponent } from './pages/companies/companies.component';
-import { ContactsComponent } from './contacts.component';
+import {ContactsRoutingModule} from './contacts-routing.module'
+import {CompaniesComponent} from './pages/companies/companies.component'
+import {ContactsComponent} from './contacts.component'
 import {
     NbButtonModule,
-    NbCardModule, NbFormFieldModule,
+    NbCardModule, NbDatepickerModule, NbDialogModule, NbFormFieldModule,
     NbIconModule,
     NbInputModule, NbSelectModule,
     NbTabsetModule,
     NbTooltipModule
 } from '@nebular/theme'
-import { TableComponent } from './components/table/table.component';
-import { NaturalContactsComponent } from './pages/natural-contacts/natural-contacts.component';
-import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component'
+import {TableComponent} from './components/table/table.component'
+import {NaturalContactsComponent} from './pages/natural-contacts/natural-contacts.component'
+import {ContactsPageComponent} from './pages/contacts-page/contacts-page.component'
+import {ModalContactComponent} from './components/modal-contact/modal-contact.component'
 
 
 @NgModule({
-  declarations: [
-    CompaniesComponent,
-    ContactsComponent,
-    TableComponent,
-    NaturalContactsComponent,
-    ContactsPageComponent
-  ],
+    declarations: [
+        CompaniesComponent,
+        ContactsComponent,
+        TableComponent,
+        NaturalContactsComponent,
+        ContactsPageComponent,
+        ModalContactComponent
+    ],
     imports: [
         CommonModule,
         ContactsRoutingModule,
+        // ,
+
         NbCardModule,
         NbTabsetModule,
         NbTooltipModule,
@@ -35,7 +39,9 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
         NbIconModule,
         NbInputModule,
         NbFormFieldModule,
-        NbSelectModule
+        NbSelectModule,
+        NbDatepickerModule
     ]
 })
-export class ContactsModule { }
+export class ContactsModule {
+}
