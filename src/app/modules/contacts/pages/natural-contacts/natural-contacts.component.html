@@ -1,49 +1,48 @@
 <div class="row">
     <div class="col-md-6">
-        <h4>Lista de empresas</h4>
+        <h4>Lista de contactos</h4>
     </div>
-    <div class="col-md-1">
-        <button nbButton
-                class="float-right"
-                [status]="'primary'"
-                nbTooltipIcon="sync"
-                nbTooltipStatus="primary"
-                nbTooltip="Actualizar tabla"
-                nbTooltipPlacement="bottom"
-                ghost>
-            <nb-icon icon="sync"></nb-icon>
-        </button>
-    </div>
-    <div class="col-md-3">
-        <nb-form-field class="float-right">
-            <input type="text" nbInput
-                   fullWidth
-                   status="primary"
-                   placeholder="Buscar">
-            <button nbSuffix nbButton outline
-                    nbTooltipIcon="search"
+    <div class="col-md-6">
+        <div class="input-group d-flex justify-content-end">
+            <button nbButton
+                    class="ml-2"
+                    [status]="'primary'"
+                    nbTooltipIcon="sync"
                     nbTooltipStatus="primary"
-                    nbTooltip="Buscar"
+                    nbTooltip="Actualizar tabla"
                     nbTooltipPlacement="bottom"
-                    (click)="search()">
-                <nb-icon [icon]="'search-outline'"
-                         pack="eva">
-                </nb-icon>
+                    ghost>
+                <nb-icon icon="sync"></nb-icon>
             </button>
-        </nb-form-field>
-    </div>
-    <div class="col-md-2 ">
-        <button nbButton
-                class="float-right"
-                [status]="'primary'"
-                nbTooltipIcon="plus"
-                nbTooltipStatus="primary"
-                nbTooltip="Agregar empresa"
-                nbTooltipPlacement="bottom"
-                ghost>
-            <nb-icon icon="plus"></nb-icon>
-            Agregar
-        </button>
+            <nb-form-field class="ml-2">
+                <input type="text" nbInput
+                       fullWidth
+                       status="primary"
+                       placeholder="Buscar">
+                <button nbSuffix nbButton outline
+                        nbTooltipIcon="search"
+                        nbTooltipStatus="primary"
+                        nbTooltip="Buscar"
+                        nbTooltipPlacement="bottom"
+                        (click)="search()">
+                    <nb-icon [icon]="'search-outline'"
+                             pack="eva">
+                    </nb-icon>
+                </button>
+            </nb-form-field>
+
+            <button nbButton
+                    class="ml-2"
+                    [status]="'primary'"
+                    nbTooltipIcon="plus"
+                    nbTooltipStatus="primary"
+                    nbTooltip="Agregar contacto"
+                    nbTooltipPlacement="bottom"
+                    ghost>
+                <nb-icon icon="plus"></nb-icon>
+                Agregar
+            </button>
+        </div>
     </div>
 </div>
 <app-table [headerTable]="headerTableContacts">
