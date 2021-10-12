@@ -12,8 +12,8 @@ import {CoreModule} from '../core/core.module'
         ModulesComponent
     ],
     imports: [
-        CommonModule,
         ModulesRoutingModule,
+        CommonModule,
         NbLayoutModule,
         CoreModule,
         NbSidebarModule,

@@ -34,6 +34,11 @@ export class ModulesComponent {
             link: '/pages/dashboard'
         },
         {
+            title: 'CONTACTOS',
+            icon: 'person-done-outline',
+            link: '/pages/contacts',
+        },
+        {
             title: 'CONFIGURACIÓN',
             icon: 'settings-2-outline',
             children: [
