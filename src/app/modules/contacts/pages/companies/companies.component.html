@@ -1,1 +1,18 @@
-<p>companies works!</p>
+<nb-card>
+    <nb-card-body>
+        <nb-tabset>
+            <nb-tab tabTitle="EMPRESA"
+                    tabIcon="person-outline"
+                    responsive>
+                <h4> Lista de empresas</h4>
+                <app-table [headerTable]="headerTableCompany"></app-table>
+            </nb-tab>
+            <nb-tab tabTitle="CONTACTOS"
+                    tabIcon="bell-outline"
+                    responsive>
+                <h4> Lista de Contactos</h4>
+                <app-table [headerTable]="headerTableContacts"></app-table>
+            </nb-tab>
+        </nb-tabset>
+    </nb-card-body>
+</nb-card>
