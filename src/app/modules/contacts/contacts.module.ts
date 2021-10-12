@@ -4,15 +4,26 @@ import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { CompaniesComponent } from './pages/companies/companies.component';
 import { ContactsComponent } from './contacts.component';
-import {NbButtonModule, NbCardModule, NbIconModule, NbTabsetModule, NbTooltipModule} from '@nebular/theme'
-import { TableComponent } from './components/table/table.component'
+import {
+    NbButtonModule,
+    NbCardModule, NbFormFieldModule,
+    NbIconModule,
+    NbInputModule,
+    NbTabsetModule,
+    NbTooltipModule
+} from '@nebular/theme'
+import { TableComponent } from './components/table/table.component';
+import { NaturalContactsComponent } from './pages/natural-contacts/natural-contacts.component';
+import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component'
 
 
 @NgModule({
   declarations: [
     CompaniesComponent,
     ContactsComponent,
-    TableComponent
+    TableComponent,
+    NaturalContactsComponent,
+    ContactsPageComponent
   ],
     imports: [
         CommonModule,
@@ -21,7 +32,9 @@ import { TableComponent } from './components/table/table.component'
         NbTabsetModule,
         NbTooltipModule,
         NbButtonModule,
-        NbIconModule
+        NbIconModule,
+        NbInputModule,
+        NbFormFieldModule
     ]
 })
 export class ContactsModule { }
