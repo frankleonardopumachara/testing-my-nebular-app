@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core'
 
 @Component({
-  selector: 'app-companies',
-  templateUrl: './companies.component.html',
-  styleUrls: ['./companies.component.scss']
+    selector: 'app-companies',
+    templateUrl: './companies.component.html',
+    styleUrls: ['./companies.component.scss']
 })
 export class CompaniesComponent implements OnInit {
 
-  constructor() { }
+    headerTableCompany: string[] = ['#', 'CÓDIGO', 'NOMBRE', 'ACCIONES']
 
-  ngOnInit(): void {
-  }
+    constructor() {
+    }
+
+    ngOnInit(): void {
+    }
 
 }
