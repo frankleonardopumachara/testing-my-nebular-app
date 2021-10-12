@@ -8,7 +8,7 @@ import {
     NbButtonModule,
     NbCardModule, NbFormFieldModule,
     NbIconModule,
-    NbInputModule,
+    NbInputModule, NbSelectModule,
     NbTabsetModule,
     NbTooltipModule
 } from '@nebular/theme'
@@ -34,7 +34,8 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
         NbButtonModule,
         NbIconModule,
         NbInputModule,
-        NbFormFieldModule
+        NbFormFieldModule,
+        NbSelectModule
     ]
 })
 export class ContactsModule { }
