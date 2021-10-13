@@ -15,7 +15,8 @@ import {
 import {TableComponent} from './components/table/table.component'
 import {NaturalContactsComponent} from './pages/natural-contacts/natural-contacts.component'
 import {ContactsPageComponent} from './pages/contacts-page/contacts-page.component'
-import {ModalContactComponent} from './components/modal-contact/modal-contact.component'
+import {ModalContactComponent} from './components/modal-contact/modal-contact.component';
+import { ModalCompanyComponent } from './components/modal-company/modal-company.component'
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {ModalContactComponent} from './components/modal-contact/modal-contact.co
         TableComponent,
         NaturalContactsComponent,
         ContactsPageComponent,
-        ModalContactComponent
+        ModalContactComponent,
+        ModalCompanyComponent
     ],
     imports: [
         CommonModule,

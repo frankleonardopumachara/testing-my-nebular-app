@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core'
+import {NbDialogService} from '@nebular/theme'
+import {ModalContactComponent} from "../../components/modal-contact/modal-contact.component";
+import {ModalCompanyComponent} from "../../components/modal-company/modal-company.component";
 
 @Component({
     selector: 'app-companies',
@@ -9,7 +12,7 @@ export class CompaniesComponent implements OnInit {
 
     headerTableCompany: string[] = ['#', 'CÓDIGO', 'NOMBRE', 'ACCIONES']
 
-    constructor() {
+    constructor(private dialogService: NbDialogService) {
     }
 
     ngOnInit(): void {
@@ -20,6 +23,10 @@ export class CompaniesComponent implements OnInit {
     }
 
     openModal(){
-        console.log('openModal')
+        this.dialogService.open(ModalCompanyComponent, {
+            context: {
+                title: 'Agregar empresa',
+            },
+        })
     }
 }
