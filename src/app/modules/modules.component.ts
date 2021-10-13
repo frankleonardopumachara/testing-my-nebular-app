@@ -36,7 +36,22 @@ export class ModulesComponent {
         {
             title: 'CONTACTOS',
             icon: 'person-done-outline',
-            link: '/pages/contacts',
+            // link: '/pages/contacts',
+            children: [
+                {
+                    title: 'EMPRESA',
+                    icon: 'shopping-bag-outline'
+                },
+                {
+                    title: 'EMPRESA',
+                    icon: 'shopping-bag-outline'
+                },
+                {
+                    title: 'EMPRESA',
+                    icon: 'shopping-bag-outline'
+                }
+
+            ]
         },
         {
             title: 'CONFIGURACIÓN',

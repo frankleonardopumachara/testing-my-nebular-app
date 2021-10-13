@@ -100,14 +100,154 @@
                     </div>
                 </div>
             </nb-tab>
-            <nb-tab tabTitle="Datos de empresa"
+            <nb-tab tabTitle="Información empresa"
                     tabIcon="bell-outline"
                     responsive>
-                <h1> hola mundo</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nameCompany"
+                                   class="label">
+                                Nombre empresa
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="nameCompany">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Tipo de Contacto
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">CLIENTE</nb-option>
+                            <nb-option [value]="2">PROVEEDOR</nb-option>
+                            <nb-option [value]="3">OTRO</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lineaCredito"
+                                   class="label">
+                                Linea de credito
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="lineaCredito">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="creditoDisponible"
+                                   class="label">
+                                Credito disponible
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="creditoDisponible">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="paginaWeb"
+                                   class="label">
+                                Página web
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="paginaWeb">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="descuentoVenta"
+                                   class="label">
+                                Descuento de venta
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="descuentoVenta">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telefonoMovil"
+                                   class="label">
+                                Telefono Móvil
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="telefonoMovil">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telefonoTrabajo"
+                                   class="label">
+                                Teléfono de trabajo
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="telefonoTrabajo">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telefonoCasa"
+                                   class="label">
+                                Teléfono de casa
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="telefonoCasa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="direccionCasa"
+                                   class="label">
+                                Dirección de Casa
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="direccionCasa">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="direccionTrabajo"
+                                   class="label">
+                                Dirección de trabajo
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="direccionTrabajo">
+                        </div>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Información Extra"
+                    tabIcon="bell-outline"
+                    responsive>
             </nb-tab>
         </nb-tabset>
     </nb-card-body>
     <nb-card-footer>
-        <button nbButton hero status="primary" (click)="dismiss()">Dismiss Dialog</button>
+        <button nbButton hero status="primary" (click)="dismiss()">
+            Guardar
+        </button>
     </nb-card-footer>
 </nb-card>
