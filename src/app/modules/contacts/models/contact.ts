@@ -55,7 +55,23 @@ export class Contact {
     }
 
     get fullName(): string {
-        return `${this.apellidoMaterno} ${this.apellidoPaterno}, ${this.nombres}`
+        return `${this.apellidoMaterno} ${this.apellidoPaterno}, ${this.nombres} \n ${this.tipoDocumento}:${this.nroDocumento}`
+    }
+
+    get documentID(): string {
+        return `${this.tipoDocumento}:${this.nroDocumento}`
+    }
+
+    get correos(): string {
+        return `${this.correo1} \n ${this.correo2}`
+    }
+
+    get location(): string {
+        return 'Molina - Lima - Perú'
+    }
+
+    get empresa(): string {
+        return `${this.nombreEmpresa} \n ${this.paginaWeb}`
     }
 
     // get Document()

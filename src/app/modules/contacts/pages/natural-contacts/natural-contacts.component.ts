@@ -14,26 +14,26 @@ import {Contact} from '../../models/contact'
 export class NaturalContactsComponent implements OnInit, OnDestroy {
     headerTableContacts: string[] = [
         '#',
-        'Nombre',
         'NOMBRE',
+        // 'DOCUMENTO',
+        'EMPRESA',
+        // 'PÁGINA WEB',
+        'CORREOS',
+        'DESCUENTO',
+        // 'TELEFONOS',
+        'UBICACIÓN',
         'ACCIONES'
     ]
 
     fields = [
         'fullName',
-        'tipoDocumento',
-        'nroDocumento',
-        // 'tipoContacto',
-        'nombreEmpresa',
-        'paginaWeb',
-        'correo1',
-        'correo2',
+        // 'documentID',
+        'empresa',
+        // 'paginaWeb',
+        'correos',
         'descuentoVenta',
-        'telefonoMovil',
-        'idPais',
-        'idDepartamento',
-        'idProvincia',
-        'idDistrito',
+        // 'telefonoMovil',
+        'location'
     ]
     contacts: Contact[] = []
 
@@ -44,6 +44,13 @@ export class NaturalContactsComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         // this.contacts = this.contactFront.getContacts()
         // console.log(this.contacts)
+        this.contactFront.getContacts().subscribe(
+            (response) => {
+                this.contacts = response
+            }, (err) => {
+                console.log(err)
+            }
+        )
     }
 
 
