@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core'
-import {NbDialogRef} from '@nebular/theme'
+import {NbDialogRef, NbDialogService} from '@nebular/theme'
+import {ModalContactComponent} from "../modal-contact/modal-contact.component";
 
 @Component({
     selector: 'app-modal-employ',

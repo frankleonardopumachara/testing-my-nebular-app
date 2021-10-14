@@ -16,7 +16,245 @@
         </div>
     </nb-card-header>
     <nb-card-body>
+        <nb-tabset>
+            <nb-tab tabTitle="Datos Generales"
+                    tabIcon="person-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Documento
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">DNI</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="docNumber"
+                                   class="label">
+                                Número de documento
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="docNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="inputFirstName" class="label">Nombres</label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputFirstName"
+                                   placeholder="Nombre">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputLastName"
+                                   class="label">
+                                Apellido paterno
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputLastName"
+                                   placeholder="Apellido paterno">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputLastName2"
+                                   class="label">
+                                Apellido materno
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputLastName2"
+                                   placeholder="Apellido materno">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="inputFirstName"
+                               class="label">Fecha Nacimiento</label> <br>
+                        <input nbInput
+                               fieldSize="small"
+                               placeholder="DÍA/MES/AÑO" fullWidth
+                               [nbDatepicker]="formpicker">
+                        <nb-datepicker #formpicker
+                                       format="dd/MM/yyyy"></nb-datepicker>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="salary"
+                                   class="label">
+                                Salario
+                            </label>
+                            <input type="number" fieldSize="small" nbInput fullWidth
+                                   id="salary"
+                                   placeholder="Salario">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Titulo profesional
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">Ingeniero</nb-option>
+                            <nb-option [value]="2">Abogado</nb-option>
+                        </nb-select>
+                    </div>
 
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Información empresa"
+                    tabIcon="bell-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nameCompany"
+                                   class="label">
+                                Nombre empresa
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="nameCompany">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="webPage"
+                                   class="label">
+                                Pagina web
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="webPage"
+                                   placeholder="Pagina web">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="correo"
+                                   class="label">
+                                Correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="correo"
+                                   placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="secondCorreo"
+                                   class="label">
+                                Segundo correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="secondCorreo"
+                                   placeholder="Segundo correo electrónico">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cellphone"
+                                   class="label">
+                                Telefono movil
+                            </label>
+                            <input type="number" fieldSize="small" nbInput fullWidth
+                                   id="cellphone"
+                                   placeholder="Telefono movil">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="workPhone"
+                                   class="label">
+                                Telefono del trabajo
+                            </label>
+                            <input type="number" fieldSize="small" nbInput fullWidth
+                                   id="workPhone"
+                                   placeholder="Telefono del trabajo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phoneHouse"
+                                   class="label">
+                                Telefono de casa
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="phoneHouse"
+                                   placeholder="Telefono de casa">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="direccion"
+                                   class="label">
+                                Dirección
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="direccion">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="direccionTrabajo"
+                                   class="label">
+                                Dirección de trabajo
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="direccionTrabajo">
+                        </div>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Información Extra"
+                    tabIcon="bell-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="note"
+                                   class="label">
+                                Nota
+                            </label>
+                            <input type="text" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="note">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Titulo usuario
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">ADMIN</nb-option>
+                            <nb-option [value]="2">SUPERVISOR</nb-option>
+                            <nb-option [value]="3">VENDEDOR</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+            </nb-tab>
+        </nb-tabset>
     </nb-card-body>
     <nb-card-footer>
         <button nbButton hero
