@@ -49,6 +49,9 @@
                 </div>
             </div>
         </div>
-        <app-table [headerTable]="headerTableCompany"></app-table>
+        <app-table [headerTable]="headerTableCompany"
+                   [data]="empresas"
+                   [columns]="fields">
+        </app-table>
     </nb-card-body>
 </nb-card>

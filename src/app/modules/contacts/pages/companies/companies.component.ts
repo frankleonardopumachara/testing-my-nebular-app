@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
-import {ModalContactComponent} from '../../components/modal-contact/modal-contact.component'
 import {ModalCompanyComponent} from '../../components/modal-company/modal-company.component'
+import {Empresa} from '../../models/empresa'
+import {EmpresaFrontService} from '../../servicesFront/empresa-front.service'
 
 @Component({
     selector: 'app-companies',
@@ -10,12 +11,35 @@ import {ModalCompanyComponent} from '../../components/modal-company/modal-compan
 })
 export class CompaniesComponent implements OnInit {
 
-    headerTableCompany: string[] = ['#', 'CÓDIGO', 'NOMBRE', 'ACCIONES']
+    headerTableCompany: string[] = [
+        '#',
+        'EMPRESA',
+        'CORREOS',
+        'TELEFONOS',
+        'UBICACIÓN',
+        'ACCIONES'
+    ]
+    fields = [
+        'empresa',
+        'correos',
+        'telefonos',
+        'location',
+    ]
+    empresas: Empresa[] = []
 
-    constructor(private dialogService: NbDialogService) {
+
+    constructor(private dialogService: NbDialogService,
+                public empresaFront: EmpresaFrontService) {
     }
 
     ngOnInit(): void {
+        this.empresaFront.getEmpresas().subscribe(
+            (resp) => {
+                this.empresas = resp
+            }, (err) => {
+                console.log(err)
+            }
+        )
     }
 
     search() {
