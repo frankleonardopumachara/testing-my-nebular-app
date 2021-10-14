@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core'
+import {Component, OnDestroy, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
-import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap'
+
 import {ModalContactComponent} from '../../components/modal-contact/modal-contact.component'
+import {ContactFrontService} from '../../servicesFront/contact-front.service'
+import {Contact} from '../../models/contact'
 
 @Component({
     selector: 'app-natural-contacts',
@@ -9,15 +11,41 @@ import {ModalContactComponent} from '../../components/modal-contact/modal-contac
     styleUrls: ['./natural-contacts.component.scss'],
     providers: [NbDialogService]
 })
-export class NaturalContactsComponent implements OnInit {
-    headerTableContacts: string[] = ['#', 'CÓDIGO DE CONTACTO', 'NOMBRE', 'ACCIONES']
+export class NaturalContactsComponent implements OnInit, OnDestroy {
+    headerTableContacts: string[] = [
+        '#',
+        'Nombre',
+        'NOMBRE',
+        'ACCIONES'
+    ]
 
-    constructor(private dialogService: NbDialogService) {
+    fields = [
+        'fullName',
+        'tipoDocumento',
+        'nroDocumento',
+        // 'tipoContacto',
+        'nombreEmpresa',
+        'paginaWeb',
+        'correo1',
+        'correo2',
+        'descuentoVenta',
+        'telefonoMovil',
+        'idPais',
+        'idDepartamento',
+        'idProvincia',
+        'idDistrito',
+    ]
+    contacts: Contact[] = []
 
+    constructor(private dialogService: NbDialogService,
+                public contactFront: ContactFrontService) {
     }
 
     ngOnInit(): void {
+        // this.contacts = this.contactFront.getContacts()
+        // console.log(this.contacts)
     }
+
 
     search(): void {
 
@@ -25,6 +53,7 @@ export class NaturalContactsComponent implements OnInit {
 
     openModal(): void {
         this.dialogService.open(ModalContactComponent, {
+            closeOnBackdropClick: false,
             context: {
                 title: 'Agregar contacto',
             },
@@ -39,5 +68,10 @@ export class NaturalContactsComponent implements OnInit {
         // }, () => {
         // })
     }
+
+    ngOnDestroy(): void {
+        // this.contactFront.closeSubscription()
+    }
+
 
 }

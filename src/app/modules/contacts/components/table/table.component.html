@@ -4,17 +4,23 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th *ngFor="let header of headerTable">
+                    <th scope="col" *ngFor="let header of headerTable">
                         {{header}}
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
+                <tr *ngFor="let row of data;index as iRow">
+                    <td class="text-center">
+                        {{iRow + 1}}
+                        <!-- numero de paginacion -->
+                    </td>
+                    <ng-container *ngFor="let field of columns">
+                        <td class="text-center">
+                            {{row[field]}}
+                        </td>
+                    </ng-container>
+                    <td class="text-center">
                         <button nbButton
                                 [status]="'primary'"
                                 nbTooltipIcon="eye"
@@ -22,7 +28,8 @@
                                 nbTooltip="Ver registro"
                                 nbTooltipPlacement="bottom"
                                 ghost>
-                            <nb-icon icon="eye-outline"></nb-icon>
+                            <nb-icon icon="eye-outline">
+                            </nb-icon>
                         </button>
                         <button nbButton
                                 [status]="'info'"
@@ -31,7 +38,8 @@
                                 nbTooltip="Editar registro"
                                 nbTooltipPlacement="bottom"
                                 ghost>
-                            <nb-icon icon="edit-outline"></nb-icon>
+                            <nb-icon icon="edit-outline">
+                            </nb-icon>
                         </button>
                         <button nbButton
                                 [status]="'danger'"
@@ -40,7 +48,8 @@
                                 nbTooltip="Eliminar registro"
                                 nbTooltipPlacement="bottom"
                                 ghost>
-                            <nb-icon icon="trash-outline"></nb-icon>
+                            <nb-icon icon="trash-outline">
+                            </nb-icon>
                         </button>
                     </td>
                 </tr>

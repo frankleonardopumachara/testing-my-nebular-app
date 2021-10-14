@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core'
 export class TableComponent implements OnInit {
     @Input() headerTable: string[] = []
     @Input() data: any[] = []
-    @Input() fields: string[] = []
+    @Input() columns: string[] = []
     @Input() emitField: any[] = []
 
     constructor() {

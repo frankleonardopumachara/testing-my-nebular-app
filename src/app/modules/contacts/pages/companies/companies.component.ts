@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
-import {ModalContactComponent} from "../../components/modal-contact/modal-contact.component";
-import {ModalCompanyComponent} from "../../components/modal-company/modal-company.component";
+import {ModalContactComponent} from '../../components/modal-contact/modal-contact.component'
+import {ModalCompanyComponent} from '../../components/modal-company/modal-company.component'
 
 @Component({
     selector: 'app-companies',
@@ -22,8 +22,9 @@ export class CompaniesComponent implements OnInit {
 
     }
 
-    openModal(){
+    openModal() {
         this.dialogService.open(ModalCompanyComponent, {
+            closeOnBackdropClick: false,
             context: {
                 title: 'Agregar empresa',
             },

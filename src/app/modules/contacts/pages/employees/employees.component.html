@@ -1,6 +1,6 @@
 <nb-card>
     <nb-card-header>
-        <h5>Lista de contactos</h5>
+        <h5>Lista de empleados</h5>
     </nb-card-header>
     <nb-card-body>
         <div class="row">
@@ -40,7 +40,7 @@
                             (click)="openModal()"
                             nbTooltipIcon="plus"
                             nbTooltipStatus="primary"
-                            nbTooltip="Agregar contacto"
+                            nbTooltip="Agregar Empleado"
                             nbTooltipPlacement="bottom">
                         <nb-icon icon="plus"></nb-icon>
                         Agregar
@@ -48,9 +48,6 @@
                 </div>
             </div>
         </div>
-        <app-table [headerTable]="headerTableContacts"
-                   [data]="contacts"
-                   [columns]="fields">
-        </app-table>
+        <app-table [headerTable]="headerTableEmployees"></app-table>
     </nb-card-body>
 </nb-card>

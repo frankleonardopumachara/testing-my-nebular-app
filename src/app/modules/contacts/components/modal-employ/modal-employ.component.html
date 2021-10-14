@@ -1,0 +1,31 @@
+<nb-card>
+    <nb-card-header>
+        <div class="row">
+            <div class="col-md-10">
+                <h6> {{ title }} </h6>
+            </div>
+            <div class="col-md-2">
+                <button nbButton
+                        class="float-right"
+                        (click)="dismiss()"
+                        size="small">
+                    <nb-icon icon="close-outline">
+                    </nb-icon>
+                </button>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero
+                class="float-right ml-2"
+                status="danger" (click)="dismiss()">Cancelar
+        </button>
+        <button nbButton hero
+                class="float-right"
+                status="primary" (click)="dismiss()">Guardar
+        </button>
+    </nb-card-footer>
+</nb-card>

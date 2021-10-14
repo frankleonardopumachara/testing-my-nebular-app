@@ -40,15 +40,18 @@ export class ModulesComponent {
             children: [
                 {
                     title: 'EMPRESA',
-                    icon: 'shopping-bag-outline'
+                    icon: 'shopping-bag-outline',
+                    link: '/pages/contacts/empresa'
                 },
                 {
-                    title: 'EMPRESA',
-                    icon: 'shopping-bag-outline'
+                    title: 'EMPLEADOS',
+                    icon: 'shopping-bag-outline',
+                    link: '/pages/contacts/employees'
                 },
                 {
-                    title: 'EMPRESA',
-                    icon: 'shopping-bag-outline'
+                    title: 'CONTACTOS',
+                    icon: 'shopping-bag-outline',
+                    link: '/pages/contacts/contact'
                 }
 
             ]
