@@ -1,19 +1,7 @@
 <nb-card>
     <nb-card-header>
-        <div class="row">
-            <div class="col-md-10">
-                <h6> {{ title }} </h6>
-            </div>
-            <div class="col-md-2">
-                <button nbButton
-                        class="float-right"
-                        (click)="dismiss()"
-                        size="small">
-                    <nb-icon icon="close-outline">
-                    </nb-icon>
-                </button>
-            </div>
-        </div>
+        <app-header-modal (close)="dismiss()" [title]="title">
+        </app-header-modal>
     </nb-card-header>
     <nb-card-body>
         <nb-tabset>
@@ -108,7 +96,6 @@
                             <nb-option [value]="2">Abogado</nb-option>
                         </nb-select>
                     </div>
-
                 </div>
             </nb-tab>
             <nb-tab tabTitle="Información empresa"

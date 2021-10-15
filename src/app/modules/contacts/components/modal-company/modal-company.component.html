@@ -1,19 +1,8 @@
 <nb-card>
     <nb-card-header>
-        <div class="row">
-            <div class="col-md-10">
-                <h6> {{ title }} </h6>
-            </div>
-            <div class="col-md-2">
-                <button nbButton
-                        class="float-right"
-                        (click)="dismiss()"
-                        size="small">
-                    <nb-icon icon="close-outline">
-                    </nb-icon>
-                </button>
-            </div>
-        </div>
+        <simple-header-modal [title]="title"
+                             (close)="dismiss()">
+        </simple-header-modal>
     </nb-card-header>
     <nb-card-body>
         <nb-tabset>
@@ -27,9 +16,6 @@
                         </label> <br>
                         <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
                             <nb-option [value]="1">DNI</nb-option>
-                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
-                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
-                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
                         </nb-select>
                     </div>
                     <div class="col-md-6">
@@ -86,7 +72,6 @@
                         </div>
                     </div>
                 </div>
-
             </nb-tab>
             <nb-tab tabTitle="Datos extras"
                     tabIcon="bell-outline"
@@ -134,9 +119,6 @@
                         </label> <br>
                         <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
                             <nb-option [value]="1">PERU</nb-option>
-                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
-                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
-                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
                         </nb-select>
                     </div>
                 </div>
@@ -147,9 +129,6 @@
                         </label> <br>
                         <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
                             <nb-option [value]="1">LIMA</nb-option>
-                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
-                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
-                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
                         </nb-select>
                     </div>
                     <div class="col-md-6">
@@ -158,9 +137,6 @@
                         </label> <br>
                         <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
                             <nb-option [value]="1">LIMA</nb-option>
-                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
-                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
-                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
                         </nb-select>
                     </div>
                 </div>
@@ -171,9 +147,6 @@
                         </label> <br>
                         <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
                             <nb-option [value]="1">CALLAO</nb-option>
-                            <!--                            <nb-option [value]="2">Option 2</nb-option>-->
-                            <!--                            <nb-option [value]="3">Option 3</nb-option>-->
-                            <!--                            <nb-option [value]="4">Option 4</nb-option>-->
                         </nb-select>
                     </div>
                     <div class="col-sm-6">

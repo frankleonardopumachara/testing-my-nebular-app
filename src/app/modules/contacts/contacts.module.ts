@@ -6,7 +6,7 @@ import {CompaniesComponent} from './pages/companies/companies.component'
 import {ContactsComponent} from './contacts.component'
 import {
     NbButtonModule,
-    NbCardModule, NbDatepickerModule, NbDialogModule, NbFormFieldModule,
+    NbCardModule, NbDatepickerModule, NbFormFieldModule,
     NbIconModule,
     NbInputModule, NbSelectModule, NbSpinnerModule,
     NbTabsetModule,
@@ -15,11 +15,11 @@ import {
 import {TableComponent} from './components/table/table.component'
 import {NaturalContactsComponent} from './pages/natural-contacts/natural-contacts.component'
 import {ContactsPageComponent} from './pages/contacts-page/contacts-page.component'
-import {ModalContactComponent} from './components/modal-contact/modal-contact.component';
-import { ModalCompanyComponent } from './components/modal-company/modal-company.component';
-import { EmployeesComponent } from './pages/employees/employees.component';
-import { ModalEmployComponent } from './components/modal-employ/modal-employ.component';
-import { HeaderModalComponent } from './components/header-modal/header-modal.component'
+import {ModalContactComponent} from './components/modal-contact/modal-contact.component'
+import {ModalCompanyComponent} from './components/modal-company/modal-company.component'
+import {EmployeesComponent} from './pages/employees/employees.component'
+import {ModalEmployComponent} from './components/modal-employ/modal-employ.component'
+import {SharedModule} from '../../shared/shared.module'
 
 
 @NgModule({
@@ -33,13 +33,10 @@ import { HeaderModalComponent } from './components/header-modal/header-modal.com
         ModalCompanyComponent,
         EmployeesComponent,
         ModalEmployComponent,
-        HeaderModalComponent
     ],
     imports: [
         CommonModule,
         ContactsRoutingModule,
-        // ,
-
         NbCardModule,
         NbTabsetModule,
         NbTooltipModule,
@@ -49,7 +46,8 @@ import { HeaderModalComponent } from './components/header-modal/header-modal.com
         NbFormFieldModule,
         NbSelectModule,
         NbDatepickerModule,
-        NbSpinnerModule
+        NbSpinnerModule,
+        SharedModule
     ]
 })
 export class ContactsModule {

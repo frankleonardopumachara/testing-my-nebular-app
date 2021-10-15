@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
+/** propio */
 import {ModalEmployComponent} from '../../components/modal-employ/modal-employ.component'
 import {EmployFrontService} from '../../servicesFront/employ-front.service'
 import {Employ} from '../../models/employ'
@@ -42,7 +43,6 @@ export class EmployeesComponent implements OnInit {
             }
         )
     }
-
 
     search() {
     }
