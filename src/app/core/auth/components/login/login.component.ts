@@ -1,5 +1,5 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core'
-import {NbAuthService, NbLoginComponent} from '@nebular/auth'
+import {ChangeDetectorRef, Component, Inject, OnInit} from '@angular/core'
+import {NB_AUTH_OPTIONS, NbAuthService, NbLoginComponent} from '@nebular/auth'
 import {Router} from '@angular/router'
 
 @Component({
@@ -11,12 +11,13 @@ export class LoginComponent extends NbLoginComponent implements OnInit {
 
     constructor(
         private authService: NbAuthService,
-        cd: ChangeDetectorRef,
-        router: Router) {
-        super(authService, {}, cd, router)
+        @Inject(NB_AUTH_OPTIONS) opts: any,
+        private chd: ChangeDetectorRef,
+        private fRouter: Router) {
+        super(authService, opts, chd, fRouter)
     }
 
     ngOnInit(): void {
-        console.log(this.showMessages)
+        console.log('social links', this.socialLinks)
     }
 }
