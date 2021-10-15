@@ -1,5 +1,7 @@
-<nb-card>
-
+<nb-card [nbSpinner]="loading"
+         nbSpinnerStatus="basic"
+         nbSpinnerSize="large"
+         nbSpinnerMessage=" cargando">
     <nb-card-header>
         <h5>Lista de empresas</h5>
     </nb-card-header>
@@ -32,6 +34,7 @@
                             nbTooltipStatus="primary"
                             nbTooltip="Actualizar tabla"
                             nbTooltipPlacement="bottom"
+                            (click)="getData()"
                             ghost>
                         <nb-icon icon="sync"></nb-icon>
                     </button>

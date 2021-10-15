@@ -8,7 +8,7 @@ import {
     NbButtonModule,
     NbCardModule, NbDatepickerModule, NbDialogModule, NbFormFieldModule,
     NbIconModule,
-    NbInputModule, NbSelectModule,
+    NbInputModule, NbSelectModule, NbSpinnerModule,
     NbTabsetModule,
     NbTooltipModule
 } from '@nebular/theme'
@@ -18,7 +18,8 @@ import {ContactsPageComponent} from './pages/contacts-page/contacts-page.compone
 import {ModalContactComponent} from './components/modal-contact/modal-contact.component';
 import { ModalCompanyComponent } from './components/modal-company/modal-company.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
-import { ModalEmployComponent } from './components/modal-employ/modal-employ.component'
+import { ModalEmployComponent } from './components/modal-employ/modal-employ.component';
+import { HeaderModalComponent } from './components/header-modal/header-modal.component'
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ModalEmployComponent } from './components/modal-employ/modal-employ.com
         ModalContactComponent,
         ModalCompanyComponent,
         EmployeesComponent,
-        ModalEmployComponent
+        ModalEmployComponent,
+        HeaderModalComponent
     ],
     imports: [
         CommonModule,
@@ -46,7 +48,8 @@ import { ModalEmployComponent } from './components/modal-employ/modal-employ.com
         NbInputModule,
         NbFormFieldModule,
         NbSelectModule,
-        NbDatepickerModule
+        NbDatepickerModule,
+        NbSpinnerModule
     ]
 })
 export class ContactsModule {

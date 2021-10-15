@@ -41,15 +41,15 @@ export class Empresa {
     }
 
     get empresa(): string {
-        return `${this.razonSocial} \n${this.tipoDocumento}:${this.nroDocumento}`
+        return `${this.razonSocial} \n ${this.tipoDocumento}:${this.nroDocumento}`
     }
 
     get correos(): string {
-        return `${this.correo1} \n${this.correo2}`
+        return `${this.correo1} \n ${this.correo2}`
     }
 
     get telefonos(): string {
-        return `Movil:${this.telefonoMovil} \nTrabajo: ${this.telefonoTrabajo} \nCasa:${this.telefonoCasa}`
+        return `Movil:${this.telefonoMovil} \n Trabajo: ${this.telefonoTrabajo} \n Casa:${this.telefonoCasa}`
     }
 
     get location(): string {

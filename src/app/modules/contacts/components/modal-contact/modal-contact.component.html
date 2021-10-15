@@ -1,19 +1,7 @@
 <nb-card accent="info">
     <nb-card-header>
-        <div class="row">
-            <div class="col-md-10">
-                <h6> {{ title }} </h6>
-            </div>
-            <div class="col-md-2">
-                <button nbButton
-                        class="float-right"
-                        (click)="dismiss()"
-                        size="small">
-                    <nb-icon icon="close-outline">
-                    </nb-icon>
-                </button>
-            </div>
-        </div>
+        <app-header-modal [title]="title" (close)="dismiss()">
+        </app-header-modal>
     </nb-card-header>
     <nb-card-body>
         <nb-tabset>

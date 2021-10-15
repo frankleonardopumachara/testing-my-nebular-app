@@ -53,7 +53,7 @@ export class Employ {
     }
 
     get correos(): string {
-        return `${this.correo1} \n${this.correo2}`
+        return `${this.correo1}\n${this.correo2}`
     }
 
     get telefonos(): string {

@@ -10,6 +10,7 @@ import {EmpresaFrontService} from '../../servicesFront/empresa-front.service'
     styleUrls: ['./companies.component.scss']
 })
 export class CompaniesComponent implements OnInit {
+    loading = true
 
     headerTableCompany: string[] = [
         '#',
@@ -33,10 +34,18 @@ export class CompaniesComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getData()
+    }
+
+    getData(): void {
+        this.empresas = []
+        this.loading = true
         this.empresaFront.getEmpresas().subscribe(
             (resp) => {
                 this.empresas = resp
+                this.loading = false
             }, (err) => {
+                this.loading = false
                 console.log(err)
             }
         )
