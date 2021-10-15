@@ -43,35 +43,4 @@ import {environment} from '../../../environments/environment'
     ]
 })
 export class AuthModule {
-
-    // static forRoot(): ModuleWithProviders<AuthModule> {
-    //     return {
-    //         ngModule: AuthModule,
-    //         providers: [
-    //             [
-    //                 NbAuthModule.forRoot({
-    //
-    //                     strategies: [
-    //                         NbDummyAuthStrategy.setup({
-    //                             name: 'email',
-    //                             delay: 3000,
-    //                         }),
-    //                     ],
-    //                     forms: {
-    //                         login: {
-    //                             socialLinks: [],
-    //                         },
-    //                         register: {
-    //                             socialLinks: [{
-    //                                 url: 'https://twitter.com/akveo_inc',
-    //                                 target: '_blank',
-    //                                 icon: 'twitter',
-    //                             }],
-    //                         },
-    //                     },
-    //                 }).providers
-    //             ]
-    //         ]
-    //     }
-    // }
 }

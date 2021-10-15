@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {NotFoundComponent} from './components/not-found/not-found.component'
 import {HeaderModalComponent} from './components/header-modal/header-modal.component'
+import {NbIconModule} from '@nebular/theme'
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import {HeaderModalComponent} from './components/header-modal/header-modal.compo
         HeaderModalComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        NbIconModule
     ],
     exports: [
         HeaderModalComponent
