@@ -1,4 +1,7 @@
-<nb-card>
+<nb-card [nbSpinner]="loading"
+         nbSpinnerStatus="basic"
+         nbSpinnerSize="large"
+         nbSpinnerMessage=" cargando">
     <nb-card-header>
         <h5>Lista de empleados</h5>
     </nb-card-header>
@@ -48,6 +51,9 @@
                 </div>
             </div>
         </div>
-        <app-table [headerTable]="headerTableEmployees"></app-table>
+        <app-table [headerTable]="headerTableEmployees"
+                   [data]="employs"
+                   [columns]="fields">
+        </app-table>
     </nb-card-body>
 </nb-card>

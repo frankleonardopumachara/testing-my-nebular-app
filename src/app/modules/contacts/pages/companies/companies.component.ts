@@ -52,7 +52,6 @@ export class CompaniesComponent implements OnInit {
     }
 
     search() {
-
     }
 
     openModal() {
