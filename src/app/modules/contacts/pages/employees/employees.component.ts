@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
 /** propio */
 import {ModalEmployComponent} from '../../components/modal-employ/modal-employ.component'
-import {EmployFrontService} from '../../servicesFront/employ-front.service'
-import {Employ} from '../../models/employ'
+import {EmployeeService} from '../../../../core/services/contacts/employee.service'
+import {Employee} from '../../../../core/models/employee'
 
 @Component({
     selector: 'app-employees',
@@ -18,12 +18,12 @@ export class EmployeesComponent implements OnInit {
         'correos',
         'telefonos',
     ]
-    employs: Employ[] = []
+    employs: Employee[] = []
     loading = true
 
 
     constructor(private dialogService: NbDialogService,
-                private employFrontService: EmployFrontService) {
+                private employFrontService: EmployeeService) {
     }
 
     ngOnInit(): void {

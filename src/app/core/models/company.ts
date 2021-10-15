@@ -1,6 +1,6 @@
-export class Empresa {
-    static empresaToJson(obj: any) {
-        return new Empresa(
+export class Company {
+    static create(obj: any) {
+        return new Company(
             obj['idEmpresa'],
             obj['razonSocial'],
             obj['idDocumento'],

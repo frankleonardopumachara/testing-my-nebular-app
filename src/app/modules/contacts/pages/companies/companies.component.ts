@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
 import {ModalCompanyComponent} from '../../components/modal-company/modal-company.component'
-import {Empresa} from '../../models/empresa'
-import {EmpresaFrontService} from '../../servicesFront/empresa-front.service'
+import {Company} from '../../../../core/models/company'
+import {CompanyService} from '../../../../core/services/contacts/company.service'
 
 @Component({
     selector: 'app-companies',
@@ -26,11 +26,11 @@ export class CompaniesComponent implements OnInit {
         'telefonos',
         'location',
     ]
-    empresas: Empresa[] = []
+    empresas: Company[] = []
 
 
     constructor(private dialogService: NbDialogService,
-                public empresaFront: EmpresaFrontService) {
+                public empresaFront: CompanyService) {
     }
 
     ngOnInit(): void {

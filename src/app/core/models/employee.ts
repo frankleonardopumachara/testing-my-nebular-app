@@ -1,6 +1,6 @@
-export class Employ {
-    static employToJson(obj: any) {
-        return new Employ(
+export class Employee {
+    static create(obj: any) {
+        return new Employee(
             obj['idEmpleado'],
             obj['nombres'],
             obj['apellidoPaterno'],

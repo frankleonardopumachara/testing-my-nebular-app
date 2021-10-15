@@ -14,7 +14,6 @@ import {
 } from '@nebular/theme'
 import {TableComponent} from './components/table/table.component'
 import {NaturalContactsComponent} from './pages/natural-contacts/natural-contacts.component'
-import {ContactsPageComponent} from './pages/contacts-page/contacts-page.component'
 import {ModalContactComponent} from './components/modal-contact/modal-contact.component'
 import {ModalCompanyComponent} from './components/modal-company/modal-company.component'
 import {EmployeesComponent} from './pages/employees/employees.component'
@@ -28,7 +27,6 @@ import {SharedModule} from '../../shared/shared.module'
         ContactsComponent,
         TableComponent,
         NaturalContactsComponent,
-        ContactsPageComponent,
         ModalContactComponent,
         ModalCompanyComponent,
         EmployeesComponent,

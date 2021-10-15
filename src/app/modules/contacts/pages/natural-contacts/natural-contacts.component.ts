@@ -2,8 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core'
 import {NbDialogService} from '@nebular/theme'
 
 import {ModalContactComponent} from '../../components/modal-contact/modal-contact.component'
-import {ContactFrontService} from '../../servicesFront/contact-front.service'
-import {Contact} from '../../models/contact'
+import {ContactService} from '../../../../core/services/contacts/contact.service'
+import {Contact} from '../../../../core/models/contact'
 
 @Component({
     selector: 'app-natural-contacts',
@@ -38,7 +38,7 @@ export class NaturalContactsComponent implements OnInit, OnDestroy {
     contacts: Contact[] = []
 
     constructor(private dialogService: NbDialogService,
-                public contactFront: ContactFrontService) {
+                public contactFront: ContactService) {
     }
 
     ngOnInit(): void {

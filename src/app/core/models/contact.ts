@@ -1,5 +1,5 @@
 export class Contact {
-    static contactToJson(obj: any) {
+    static create(obj: any) {
         return new Contact(
             obj['idContacto'],
             obj['nombres'],
@@ -73,7 +73,4 @@ export class Contact {
     get empresa(): string {
         return `${this.nombreEmpresa} \n ${this.paginaWeb}`
     }
-
-    // get Document()
-
 }
