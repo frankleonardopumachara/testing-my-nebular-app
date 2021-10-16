@@ -1,0 +1,9 @@
+<button nbButton hero
+        class="float-right ml-2"
+        status="danger" (click)="save()">Cancelar
+</button>
+<button nbButton hero
+        class="float-right"
+        [disabled]="isDisabled"
+        status="primary" (click)="close()">Guardar
+</button>
