@@ -3,7 +3,7 @@
 // font of the app
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-@import 'assets/themes/themes';
+@import 'themes';
 
 @import '../node_modules/@nebular/theme/styles/globals';
 @import '../node_modules/@nebular/auth/styles/globals';
@@ -18,7 +18,4 @@
     @include nb-auth-global(); // append the install mixin inside of the nb-install
 };
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
