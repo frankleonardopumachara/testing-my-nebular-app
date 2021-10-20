@@ -4,7 +4,7 @@ import {NbMenuItem} from '@nebular/theme'
 @Component({
     selector: 'app-modules',
     template: `
-        <nb-layout windowMode>
+        <nb-layout>
             <nb-layout-header fixed>
                 <!-- Insert header here -->
                 <app-header></app-header>
