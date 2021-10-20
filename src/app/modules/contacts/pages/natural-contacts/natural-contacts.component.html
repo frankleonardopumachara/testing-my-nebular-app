@@ -1,0 +1,56 @@
+<nb-card>
+    <nb-card-header>
+        <h5>Lista de contactos</h5>
+    </nb-card-header>
+    <nb-card-body>
+        <div class="row">
+            <div class="col-md-9">
+                <nb-form-field>
+                    <input type="search" nbInput
+                           fullWidth
+                           status="primary"
+                           placeholder="Buscar">
+                    <button nbSuffix nbButton outline
+                            nbTooltipIcon="search"
+                            nbTooltipStatus="primary"
+                            nbTooltip="Buscar"
+                            nbTooltipPlacement="bottom"
+                            (click)="search()">
+                        <nb-icon [icon]="'search-outline'"
+                                 pack="eva">
+                        </nb-icon>
+                    </button>
+                </nb-form-field>
+            </div>
+            <div class="col-md-3 mt-1">
+                <div class="input-group d-flex justify-content-end">
+                    <button nbButton
+                            class="ml-2"
+                            [status]="'primary'"
+                            nbTooltipIcon="sync"
+                            nbTooltipStatus="primary"
+                            nbTooltip="Actualizar tabla"
+                            nbTooltipPlacement="bottom"
+                            ghost>
+                        <nb-icon icon="sync"></nb-icon>
+                    </button>
+                    <button nbButton
+                            class="ml-2"
+                            [status]="'primary'"
+                            (click)="openModal()"
+                            nbTooltipIcon="plus"
+                            nbTooltipStatus="primary"
+                            nbTooltip="Agregar contacto"
+                            nbTooltipPlacement="bottom">
+                        <nb-icon icon="plus"></nb-icon>
+                        Agregar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <app-table [headerTable]="headerTableContacts"
+                   [data]="contacts"
+                   [columns]="fields">
+        </app-table>
+    </nb-card-body>
+</nb-card>

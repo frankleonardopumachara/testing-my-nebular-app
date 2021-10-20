@@ -1,0 +1,173 @@
+<nb-card>
+    <nb-card-header>
+        <simple-header-modal [title]="title"
+                             (close)="dismiss()">
+        </simple-header-modal>
+    </nb-card-header>
+    <nb-card-body>
+        <nb-tabset>
+            <nb-tab tabTitle="Datos Generales"
+                    tabIcon="person-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Documento
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">DNI</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="docNumber"
+                                   class="label">
+                                Número de documento
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="docNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputBusinessName" class="label">Razon social</label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputBusinessName"
+                                   placeholder="Razon social">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputWebPage" class="label">Pagina web</label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputWebPage"
+                                   placeholder="Pagina web">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputMail1"
+                                   class="label">
+                                Correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputMail1"
+                                   placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="inputMail2"
+                                   class="label">
+                                Segundo correo electrónico
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="inputMail2"
+                                   placeholder="Segundo correo electrónico">
+                        </div>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Datos extras"
+                    tabIcon="bell-outline"
+                    responsive>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cellphone"
+                                   class="label">
+                                Telefono movil
+                            </label>
+                            <input type="number" fieldSize="small" nbInput fullWidth
+                                   id="cellphone"
+                                   placeholder="Telefono movil">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="workPhone"
+                                   class="label">
+                                Telefono del trabajo
+                            </label>
+                            <input type="number" fieldSize="small" nbInput fullWidth
+                                   id="workPhone"
+                                   placeholder="Telefono del trabajo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phoneHouse"
+                                   class="label">
+                                Telefono de casa
+                            </label>
+                            <input type="number" nbInput fullWidth
+                                   fieldSize="small"
+                                   id="phoneHouse"
+                                   placeholder="Telefono de casa">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label">
+                            Pais
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">PERU</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Departamento
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">LIMA</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label">
+                            Provincia
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">LIMA</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="label">
+                            Distrito
+                        </label> <br>
+                        <nb-select placeholder="Seleccionar" fullWidth [size]="'small'">
+                            <nb-option [value]="1">CALLAO</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="note"
+                                   class="label">
+                                Nota
+                            </label>
+                            <input type="text" fieldSize="small" nbInput fullWidth
+                                   id="note"
+                                   placeholder="Nota">
+                        </div>
+                    </div>
+                </div>
+            </nb-tab>
+        </nb-tabset>
+    </nb-card-body>
+    <nb-card-footer>
+        <simple-footer-modal (closeModal)="dismiss()"
+                             [isDisabled]="true"
+                             (saveInfo)="dismiss()">
+        </simple-footer-modal>
+    </nb-card-footer>
+</nb-card>

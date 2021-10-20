@@ -1,13 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'themes';
+// font of the app
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-@import '~@nebular/theme/styles/globals';
-@import '~@nebular/auth/styles/globals';
+@import 'assets/themes/themes';
+
+@import '../node_modules/@nebular/theme/styles/globals';
+@import '../node_modules/@nebular/auth/styles/globals';
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/grid';
 
 @include nb-install() {
     @include nb-theme-global();
     @include nb-auth-global(); // append the install mixin inside of the nb-install
 };
 
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

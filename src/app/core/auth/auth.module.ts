@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core'
+import {ModuleWithProviders, NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 
 import {AuthRoutingModule} from './auth-routing.module'
@@ -14,12 +14,15 @@ import {
 } from '@nebular/theme'
 import {NbAuthModule, NbDummyAuthStrategy, NbPasswordAuthStrategy} from '@nebular/auth'
 import {FormsModule} from '@angular/forms'
-
+import {PasswordRecoverComponent} from './components/password-recover/password-recover.component'
+import {HttpClientModule} from '@angular/common/http'
+import {environment} from '../../../environments/environment'
 
 @NgModule({
     declarations: [
         LayoutAuthComponent,
-        LoginComponent
+        LoginComponent,
+        PasswordRecoverComponent,
     ],
     imports: [
         CommonModule,
@@ -34,7 +37,9 @@ import {FormsModule} from '@angular/forms'
         NbButtonModule,
         NbLayoutModule,
         NbCardModule,
-        NbIconModule
+        NbIconModule,
+
+        NbAuthModule
     ]
 })
 export class AuthModule {

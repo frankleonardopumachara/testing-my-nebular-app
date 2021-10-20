@@ -3,8 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+    production: false,
+    apiBaseUrl: 'https://616869e0ba841a001727c77e.mockapi.io/'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

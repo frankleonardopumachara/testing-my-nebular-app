@@ -3,11 +3,12 @@ import {BrowserModule} from '@angular/platform-browser'
 
 import {AppComponent} from './app.component'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {NbThemeModule, NbLayoutModule} from '@nebular/theme'
+import {NbThemeModule, NbLayoutModule, NbMenuModule, NbDatepickerModule, NbDialogModule} from '@nebular/theme'
 import {NbEvaIconsModule} from '@nebular/eva-icons'
 import {AppRoutingModule} from './app-routing.module'
 import {HttpClientModule} from '@angular/common/http'
-import {NbAuthModule, NbDummyAuthStrategy} from '@nebular/auth'
+import {NbAuthModule, NbDummyAuthStrategy, NbOAuth2AuthStrategy, NbPasswordAuthStrategy} from '@nebular/auth'
+import {environment} from '../environments/environment'
 
 @NgModule({
     declarations: [
@@ -20,43 +21,55 @@ import {NbAuthModule, NbDummyAuthStrategy} from '@nebular/auth'
         NbLayoutModule,
         NbEvaIconsModule,
         AppRoutingModule,
+        NbMenuModule.forRoot(),
+        NbDialogModule.forRoot(),
+        NbDatepickerModule.forRoot(),
         HttpClientModule,
+
         NbAuthModule.forRoot({
             strategies: [
                 NbDummyAuthStrategy.setup({
-                    name: 'email',
-                    delay: 3000,
+                    name: 'dummy',
+                    alwaysFail: false,
+                    delay: 0
                 }),
-                // NbPasswordAuthStrategy.setup({
-                //     name: 'email1',
-                //     baseEndpoint: 'https://example.com/app-api/v1',
-                //     login: {
-                //         redirect: {
-                //             success: '/home/',
-                //             failure: null
-                //         },
-                //         endpoint: '/api/auth/login'
-                //     },
-                //     register: {
-                //         endpoint: '/api/auth/register'
-                //     },
-                //
-                // }),
+                NbPasswordAuthStrategy.setup({
+                    name: 'email',
+                    baseEndpoint: environment.apiBaseUrl,
+
+                    login: {
+                        endpoint: '/login',
+                        method: 'post',
+                        redirect: {
+                            success: '/dashboard'
+                        }
+                    },
+                    requestPass: {
+                        endpoint: '/api/auth/request-password',
+                        method: 'post',
+                        redirect: {
+                            success: '/'
+                        }
+                    }
+                }),
             ],
             forms: {
                 login: {
+                    strategy: 'dummy',
                     redirectDelay: 0,
-                    strategy: 'email',
                     rememberMe: true,
                     showMessages: {
                         success: true,
                         error: true,
                     },
+                    socialLinks: [{
+                        url: 'https://twitter.com/akveo_inc',
+                        target: '_blank',
+                        icon: 'twitter',
+                    }],
                 },
-                register: {
-                    redirectDelay: 0,
-                    strategy: 'email',
-                    rememberMe: true,
+                requestPass: {
+                    strategies: 'email',
                     showMessages: {
                         success: true,
                         error: true,
@@ -64,7 +77,6 @@ import {NbAuthModule, NbDummyAuthStrategy} from '@nebular/auth'
                 }
             }
         }),
-
     ],
     providers: [],
     bootstrap: [AppComponent]
