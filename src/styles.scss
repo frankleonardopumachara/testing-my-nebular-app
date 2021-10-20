@@ -5,17 +5,29 @@
 
 @import 'themes';
 
-@import '../node_modules/@nebular/theme/styles/globals';
-@import '../node_modules/@nebular/auth/styles/globals';
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/globals';
 
-@import '../node_modules/bootstrap/scss/functions';
-@import '../node_modules/bootstrap/scss/variables';
-@import '../node_modules/bootstrap/scss/mixins';
-@import '../node_modules/bootstrap/scss/grid';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+
+@import './pace.theme';
+
+@import './layout';
+@import './overrides';
 
 @include nb-install() {
     @include nb-theme-global();
     @include nb-auth-global(); // append the install mixin inside of the nb-install
+
+    @include ngx-layout();
+
+    // loading progress bar
+    @include ngx-pace-theme();
+
+    @include nb-overrides();
 };
 
 
