@@ -2,20 +2,24 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {NotFoundComponent} from './components/not-found/not-found.component'
 import {HeaderModalComponent} from './components/header-modal/header-modal.component'
-import {NbIconModule} from '@nebular/theme'
+import {NbButtonModule, NbIconModule} from '@nebular/theme';
+import { FooterModalComponent } from './components/footer-modal/footer-modal.component'
 
 
 @NgModule({
     declarations: [
         NotFoundComponent,
-        HeaderModalComponent
+        HeaderModalComponent,
+        FooterModalComponent
     ],
     imports: [
         CommonModule,
-        NbIconModule
+        NbIconModule,
+        NbButtonModule
     ],
     exports: [
-        HeaderModalComponent
+        HeaderModalComponent,
+        FooterModalComponent
     ]
 })
 export class SharedModule {

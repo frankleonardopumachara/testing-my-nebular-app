@@ -241,13 +241,9 @@
         </nb-tabset>
     </nb-card-body>
     <nb-card-footer>
-        <button nbButton hero
-                class="float-right ml-2"
-                status="danger" (click)="dismiss()">Cancelar
-        </button>
-        <button nbButton hero
-                class="float-right"
-                status="primary" (click)="dismiss()">Guardar
-        </button>
+        <simple-footer-modal (closeModal)="dismiss()"
+                             [isDisabled]="true"
+                             (saveInfo)="dismiss()">
+        </simple-footer-modal>
     </nb-card-footer>
 </nb-card>

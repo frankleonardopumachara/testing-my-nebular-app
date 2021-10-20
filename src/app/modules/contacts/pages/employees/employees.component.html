@@ -1,9 +1,10 @@
-<nb-card>
-
+<nb-card [nbSpinner]="loading"
+         nbSpinnerStatus="basic"
+         nbSpinnerSize="large"
+         nbSpinnerMessage=" cargando">
     <nb-card-header>
         <h5>Lista de empleados</h5>
     </nb-card-header>
-
     <nb-card-body>
         <div class="row">
             <div class="col-md-9">
@@ -29,7 +30,6 @@
                     <button nbButton
                             class="ml-2"
                             [status]="'primary'"
-                            (click)="refreshTable()"
                             nbTooltipIcon="sync"
                             nbTooltipStatus="primary"
                             nbTooltip="Actualizar tabla"
@@ -51,17 +51,9 @@
                 </div>
             </div>
         </div>
-
-        <app-table *ngIf="employees$ | async as employeesTable; else loadingTable"
-                   [headerTable]="headerTableEmployees"
-                   [data]="employeesTable"
+        <app-table [headerTable]="headerTableEmployees"
+                   [data]="employs"
                    [columns]="fields">
         </app-table>
     </nb-card-body>
 </nb-card>
-
-
-<ng-template #loadingTable>
-    <div [nbSpinner]="true" nbSpinnerStatus="basic" nbSpinnerMessage="Cargando..." class="mt-3" style="height: 48px">
-    </div>
-</ng-template>

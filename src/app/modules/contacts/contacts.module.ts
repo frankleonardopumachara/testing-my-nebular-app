@@ -39,13 +39,13 @@ import {SharedModule} from '../../shared/shared.module'
         NbTabsetModule,
         NbTooltipModule,
         NbButtonModule,
-        NbIconModule,
         NbInputModule,
         NbFormFieldModule,
         NbSelectModule,
         NbDatepickerModule,
         NbSpinnerModule,
-        SharedModule
+        SharedModule,
+        NbIconModule
     ]
 })
 export class ContactsModule {

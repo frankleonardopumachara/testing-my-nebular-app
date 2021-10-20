@@ -4,8 +4,6 @@ import {NbDialogService} from '@nebular/theme'
 import {ModalEmployComponent} from '../../components/modal-employ/modal-employ.component'
 import {EmployeeService} from '../../../../core/services/contacts/employee.service'
 import {Employee} from '../../../../core/models/employee'
-import {Observable, of} from 'rxjs'
-import {delay, map} from 'rxjs/operators'
 
 @Component({
     selector: 'app-employees',
@@ -20,34 +18,24 @@ export class EmployeesComponent implements OnInit {
         'correos',
         'telefonos',
     ]
-    employees: Employee[] = []
-    employees$: Observable<Employee[]> = of([])
+    employs: Employee[] = []
     loading = true
 
 
     constructor(private dialogService: NbDialogService,
-                private employeeService: EmployeeService) {
+                private employFrontService: EmployeeService) {
     }
 
     ngOnInit(): void {
         this.getData()
     }
 
-    refreshTable(): void {
-       this.getData()
-    }
-
     getData(): void {
-        this.employees$ = this.employeeService.getEmploys()
-            .pipe(
-                delay(3000),
-                map( (x: any) => x())
-            )
-        this.employees = []
+        this.employs = []
         this.loading = true
-        this.employeeService.getEmploys().subscribe(
+        this.employFrontService.getEmploys().subscribe(
             (resp) => {
-                this.employees = resp
+                this.employs = resp
                 this.loading = false
             }, (err) => {
                 this.loading = false
@@ -68,5 +56,3 @@ export class EmployeesComponent implements OnInit {
         })
     }
 }
-
-
